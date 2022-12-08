@@ -9,11 +9,22 @@
   <link rel="stylesheet" href="./css/header.css">  
   <link rel="stylesheet" href="./css/main.css">  
   <link rel="manifest" href="manifest.json" />
-  <script type="module">
-    import "https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate";
-    const el = document.createElement("pwa-update");
-    document.body.appendChild(el);
-  </script>
+  //<script type="module">
+  //  import "https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate";
+ //   const el = document.createElement("pwa-update");
+ //   document.body.appendChild(el);
+ // </script>
+if ("serviceWorker" in navigator) {
+          //서비스워커가 있을때(서비스워커 지원여부)
+          navigator.serviceWorker
+            .register("service-worker.js") //등록
+            .then(function (success) {
+              console.log("serviceWorker 설치에 성공했습니다!", success);
+            })
+            .catch(function (error) {
+              console.log("serviceWorker 설치에 실패했습니다", error);
+            });
+        }
 </head>
 <body class="main">
   <div id="loadingimg" class="intro">
