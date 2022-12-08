@@ -9,7 +9,10 @@
   "short_name": "배스킨라빈스",
   "start_url": "https://flysky31.github.io/pwa/",
   "theme_color": "#ffffff",
-  "categories": [],
+  "categories": [
+    "food"
+  ],
+  "gcm_sender_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
   "screenshots": [
     {
       "src": "images/screenshot1.PNG",
